@@ -51,6 +51,27 @@ const reverseString = (str) => {
     return str.split('').reverse().join('');
 };
 
+// *** 3rd Method ***
 
+const reverseString = (str) => {
+    return str.split('').reduce((accumulator, currentValue) => {
+        return currentValue + accumulator;
+    }, '');
+};
+
+// We can use ES6 and remove the curlyh braces and the return statement, we can also remove the second parameter of reduce method as it will be set to the first element of the array by default
+
+const reverseString = (str) => {
+  return str
+    .split("")
+    .reduce((accumulator, currentValue) => currentValue + accumulator);
+};
+
+// 'David' => ['D', 'a', 'v', 'i', 'd']
+// accumulator = '', currentValue = 'D' => return 'D' + '' = 'D'
+// accumulator = 'D', currentValue = 'a' => return 'a' + 'D' = 'aD'
+// accumulator = 'aD', currentValue = 'v' => return 'v' + 'aD' = 'vaD'
+// accumulator = 'vaD', currentValue = 'i' => return 'i' + 'vaD' = 'ivaD'
+// accumulator = 'ivaD', currentValue = 'd' => return 'd' + 'ivaD' = 'divaD'
 
 module.exports = reverseString;
