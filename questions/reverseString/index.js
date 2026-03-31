@@ -59,7 +59,7 @@ const reverseString = (str) => {
     }, '');
 };
 
-// We can use ES6 and remove the curlyh braces and the return statement, we can also remove the second parameter of reduce method as it will be set to the first element of the array by default
+// We can use ES6 and remove the curly braces and the return statement, we can also remove the second argument4 of reduce method as it will be set to the first element of the array by default
 
 const reverseString = (str) => {
   return str
