@@ -11,20 +11,21 @@
 
 // 1st Method
 
-// const palindrome = (str) => {
-//   const reversed = str.split('').reverse().join('');
-//   return str === reversed;
-// };
+const palindrome = (str) => {
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+};
 
 //2nd Method
 
-// const palindrome = (str) => {
-//   return str.split('').every((char, index) => (
-//     char === str[str.length -1 -index]
-//   ));
-// };
+const palindrome = (str) => {
+  return str.split('').every((char, index) => (
+    char === str[str.length -1 -index]
+  ));
+};
 
 //  This method is inefficient because of duplicate checks, but it is more memory efficient because it does not create a new string.
+
 // To prevent duplicate checks, we can loop over characters in the first half of the string.
 // If the character is NOT equal to the character at the opposite index, we can return false immediately. If we finish the loop without finding any mismatches, we can return true.
 
