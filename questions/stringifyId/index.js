@@ -23,7 +23,7 @@
 // 2. Convert the Array of ID's into an Array of unique ID's.
 // 3. Join the Array to create a string of ID's seperated by a comma and a space (", ").
 
-// 1st Method: Brute-force way
+// 1st METHOD: Brute-force way
 
 const stringifyId = (arr) => {
     const idArray = arr.map(obj => obj.id);
@@ -84,7 +84,7 @@ const stringifyId = (arr) => {
     return uniqueIdArray.join(", ");
 };
 
-// 2nd Method: TOP TECH, Using Set
+// 2nd METHOD: TOP TECH, Using Set
 
 // The Set method is a built-in JavaScript object that allows you to store unique values of any type. It automatically handles duplicates for us, so we don't have to worry about checking if an ID is already in the array or not.
 
