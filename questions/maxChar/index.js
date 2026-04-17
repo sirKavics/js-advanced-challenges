@@ -8,7 +8,30 @@
 
 // To solve this problem, we have to use a character map to count the frequency of each character in the string. Then, we can iterate through the character map to find the character with the highest frequency.
 
+// This how we create a character map:
+const str = "Simplified !";
+const charMap = {};
+
+for (let char of str) {
+    if(!charMap[char]) {
+        charMap[char] = 1
+    }
+    else {
+        charMap[char] = charMap[char] + 1;
+    }
+};
+
+// We can also optimise the code by using the logical OR operator to set the value of the character in the character map:
+
+const str = "Simplified !";
+const charMap = {};
+
+for (let char of str) {
+    charMap[char] = charMap[char] + 1 || 1;
+};
+
 // 1st METHOD
+// Junior method
 
 //Steps to solve the problem:
 // 1. Create a character map
