@@ -74,7 +74,7 @@ const maxCharacter = (str) => {
   }
 
 // for (let keyAndValue of charMap) {
-//   const [key, value] = keyAndValue;})
+//   const [key, value] = keyAndValue;
 // }
 // Here we can use ES6 desctructuring to get the key and value from the map.
 
@@ -87,7 +87,5 @@ const maxCharacter = (str) => {
   }
   return maxChar;
 };
-
-
 
 module.exports = maxCharacter;
