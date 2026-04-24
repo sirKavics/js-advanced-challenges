@@ -45,16 +45,8 @@ const removeSpacesAndLowerCase = (str) => {
 
 // Set both string to lower case
 // Remove all the spaces
-// Converrt the string to an array of characters
+// Convert the string to an array of characters
 // Sorting the strings
 // Join the sorted array back into a string
-
-const anagrams = (strA, strB) => {
-    return cleanString(strA) === cleanString(strB);
-};
-
-const cleanString = (str) => {
-    return str.toLowerCase().replaceAll(" ", "").split("").sort().join("");
-}
 
 module.exports = anagrams;
