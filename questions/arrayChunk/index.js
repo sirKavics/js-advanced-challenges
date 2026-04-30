@@ -21,7 +21,21 @@ const arrayChunk = (array, size) => {
   for (let i = 0; i < array.length; i++) {
     if (i % size !== 0) {
         continue;
+      //4
     }
+    const subarray = array.slice(i, i + size);
+    chunkedArray.push(subarray);
+  }
+
+  return chunkedArray;
+};
+
+// BEST PRACTICE
+
+const arrayChunk = (array, size) => {
+  const chunkedArray = [];
+
+  for (let i = 0; i < array.length; i += size) {
     const subarray = array.slice(i, i + size);
     chunkedArray.push(subarray);
   }
