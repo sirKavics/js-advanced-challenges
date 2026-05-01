@@ -1,4 +1,4 @@
-/** Given a sentence, capitalize the first letter of each word and 
+/** Given a sentence, capitalize the first letter of each word and
  * return the capitalized sentence.
  *
  * @example
@@ -7,15 +7,40 @@
  * capitalize('i love frontend simplified') === 'I Love Frontend Simplified'
  */
 
+// 1ST METHOD
+
+// Create an empty 'result' string with the first letter in given string capitalized
+
+// For each character in the string
+// If the character to the left has a space
+// Capitalize the character and add it to 'result'
+//Else
+// Add it to 'result'
+
 const capitalize = (str) => {
-    const result = [];
+  let result = str[0].toUpperCase();
 
-    for (let word of str.split(' ')) {
-        const capitalizedWord = word[0].toUpperCase() + word.slice(1)
-        result.push(capitalizedWord);
+  for (let i = 1; i < str.length; i++) {
+    if (str[i - 1] === " ") {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i];
     }
+  }
+  return result;
+};
 
- return result.join(' ');
+// Best Practice
+
+const capitalize = (str) => {
+  const result = [];
+
+  for (let word of str.split(" ")) {
+    const capitalizedWord = word[0].toUpperCase() + word.slice(1);
+    result.push(capitalizedWord);
+  }
+
+  return result.join(" ");
 };
 
 module.exports = capitalize;
